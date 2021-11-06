@@ -16,7 +16,7 @@ class MainViewController: UIViewController, MainViewProtocol {
             self.tableView.reloadData()
         }
     }
-    
+    // !
     var countSections = Int()
     var countRows = [Int]()
     var modelsStructs = [[SettingsCellOption]]()
@@ -103,14 +103,14 @@ class MainViewController: UIViewController, MainViewProtocol {
         tableView.reloadData()
     }
     
-    @objc func buttonRndDidPressed() {
-        print("Пользователь нажал на кнопку Зарандомить таблицу. View сообщает презентеру об этом")
-        presenter.buttonRndDidPressed(with: models)
-    }
-    
     @objc func buttonUpdDidPressed() {
         print("Пользователь нажал на кнопку Обновить таблицу. View сообщает презентеру об этом")
         presenter.buttonUpdDidPressed()
+    }
+    
+    @objc func buttonRndDidPressed() {
+        print("Пользователь нажал на кнопку Зарандомить таблицу. View сообщает презентеру об этом")
+        presenter.buttonRndDidPressed(with: models)
     }
 }
 
@@ -132,7 +132,7 @@ extension MainViewController: UITableViewDataSource {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: MainTableViewCell.identifier, for: indexPath) as? MainTableViewCell else {
             return UITableViewCell()
         }
-        cell.configure(with: model)
+        cell.configure(with: model) //!
         return cell
     }
 }

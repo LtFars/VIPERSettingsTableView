@@ -28,7 +28,7 @@ class MainInteractor: MainInteractorProtocol {
     func getRawDataFromEntity() {
         print("Интерактор берет сырые данные из сущности")
         guard let data = entityData?.createOptions() else { return }
-        self.data = data
+        self.data = data // !
     }
     
     func getRawDataForConfigureViewFromEntity() {

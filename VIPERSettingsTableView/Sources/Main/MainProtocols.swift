@@ -8,7 +8,6 @@
 
 protocol MainViewProtocol: AnyObject {
     func setupInputTableData(with data: [Section], rows: [Int], sections: Int, models: [[SettingsCellOption]])
-    func buttonRndDidPressed()
 }
 
 protocol MainPresenterProtocol: AnyObject {
